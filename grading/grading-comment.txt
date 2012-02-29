@@ -1,0 +1,29 @@
+F1 add_party_column
+-0.5 if didn't return df
+
+F3 num_refund_records
+if you use negative amounts, that includes retribution and transferring which are not refunds.
+
+F4 num_donors
+Note that some (a lot of them actually) people donated twice. Doing a simple count without removing the duplicates is insufficient.
+
+F10 bucketize_donation_amounts
+A lot of students got this one wrong, usually by messing up the boundaries or not including enough buckets. There is a fairly simple and elegant solution: take the log of the contribution amount, round it up, and 10^x....
+
+
+Q2
+0.5 for examples of name duplications, and 0.5 for a quantitative answer of why name duplication was insignificant. It is not enough to simply say "Because there are duplicated names, this assumption cannot be trusted." Also note that some people have donated twice and by simply counting the number of unique names is a bad approximation for estimating the degree of duplication.
+
+
+Q5
+Bonuses were awarded for above-average efforts, and points subtracted for trivial efforts (e.g. a simple selection would be trivial).
+
+
+penalty:
+For more expensive queries that include groupbys and aggregations (e.g. F6-9), I deduct a very small performance penalty for programs that are an order of magnitude slower than my reference solution. This usually happens if you use Python iterations on pandas data structures rather than leveraging pandas' own data operators.
+
+If your code doesn't compile and I had to manually patch it, 1 point is deducted.
+
+
+
+
